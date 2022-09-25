@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('layout.mainlayout');
 });
 
-Route::view('/demo', 'demo');
+Route::view('/demo2', 'demo');
