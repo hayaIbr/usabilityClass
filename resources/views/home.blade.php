@@ -20,7 +20,7 @@ active
                     </p>
     </div>
 </section>
-   <div class="container mt-0 mb-10 p-5 bg-light h-100"> عربي يمين</div>
+   
 @endsection
 
 <b></b>
