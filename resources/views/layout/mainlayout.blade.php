@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="ar" dir="rtl" >
 
  <head>
-   @include('layout.partials.head')
+    @include('layout.partials.head')
  </head>
 
- <body>
+ <body class="text-right d-flex flex-column min-vh-100" style="background-color: rgb(232, 236, 239)">
 @include('layout.partials.nav')
-
-@include('layout.partials.header')
 
 @yield('content')
 
