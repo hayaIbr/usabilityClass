@@ -15,12 +15,12 @@ active
            <p class="lead text-muted">
                تريد ان تعرف نسبة رضى المستخدمين عن برنامجك، وسهولة تعلمه، وفعاليته؟ هذا الموقع لك!   </p>
                       <p>
-                      <a href="#" class="btn btn-primary">فلنبدأ</a>
+                      <a href="/start" class="btn btn-primary">فلنبدأ</a>
                       <a href="#" class="btn btn-secondary">Secondary action</a>
                     </p>
     </div>
 </section>
-   
+
 @endsection
 
 <b></b>

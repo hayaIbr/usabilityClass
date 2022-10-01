@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
     <a class="navbar-brand" href="{{url('/home')}}">UsablitiAi</a>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
