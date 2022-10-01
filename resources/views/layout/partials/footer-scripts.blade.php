@@ -45,11 +45,14 @@ jQuery(document).ready(function($){
 			//detect click on the a single event - show new event content
 			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
 				event.preventDefault();
+                prevEv =timelineComponents['eventsWrapper'].find('.selected').parent().index();
+                clickedEv = $(this).parent().index();
+                if (clickedEv < prevEv){
 				timelineComponents['timelineEvents'].removeClass('selected');
 				$(this).addClass('selected');
 				updateOlderEvents($(this));
 				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
-				updateVisibleContent($(this), timelineComponents['eventsContent']);
+				updateVisibleContent($(this), timelineComponents['eventsContent']);}
 			});
 
 			//on swipe, show next/prev event content
@@ -60,6 +63,11 @@ jQuery(document).ready(function($){
 			timelineComponents['eventsContent'].on('swiperight', function(){
 				var mq = checkMQ();
 				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
+			});
+            //on click next: verify, deny OR show next event content
+            //if(!verifyInputs){ alert }
+            timelineComponents['eventsContent'].on('click', 'button', function(){
+				showNewContent(timelineComponents, timelineTotWidth, 'next');
 			});
 
 			//keyboard navigation
@@ -72,6 +80,8 @@ jQuery(document).ready(function($){
 			});
 		});
 	}
+
+    function verifyInputs(){;}
 
 	function updateSlide(timelineComponents, timelineTotWidth, string) {
 		//retrieve translateX value of timelineComponents['eventsWrapper']

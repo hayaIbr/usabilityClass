@@ -5,7 +5,7 @@ active
 @endsection
 
 @section('content')
-
+<span></span>
 <div class="container mt-5">
     <div class="row">
 
@@ -38,13 +38,15 @@ active
                                             </h4>
                                     <hr>
                                  @include('reviewsForm')
+                                 <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="28/02/2017" class="">
                                     <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي عوامل سهولة الاستخدام تريد؟</small>
+                                        <small>اي صفات سهولة الاستخدام تريد؟</small>
                                     </h4>
                             <hr>
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
+                            <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="20/04/2017">
                                     <h4 class="text-center">تطبيقك<br>
@@ -52,6 +54,7 @@ active
                                     </h4>
                             <hr>
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
+                            <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="20/05/2017">
                                     <h4 class="text-center">التقرير<br>
