@@ -26,7 +26,7 @@ active
                                 <!-- .events -->
                             </div>
                            <!-- .events-wrapper -->
-                        
+
                             <!-- .cd-timeline-navigation -->
                         </div>
                         <!-- .timeline -->
@@ -41,7 +41,7 @@ active
                                 </li>
                                 <li data-date="28/02/2017" class="">
                                     <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي صفحات سهولة الاستخدام تريد؟</small>
+                                        <small>اي عوامل سهولة الاستخدام تريد؟</small>
                                     </h4>
                             <hr>
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
