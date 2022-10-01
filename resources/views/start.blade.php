@@ -26,10 +26,7 @@ active
                                 <!-- .events -->
                             </div>
                            <!-- .events-wrapper -->
-                        <ul class="cd-timeline-navigation">
-                            <li><a href="#0" class="prev inactive">Prev</a></li>
-                            <li><a href="#0" class="next">Next</a></li>
-                        </ul>
+                        
                             <!-- .cd-timeline-navigation -->
                         </div>
                         <!-- .timeline -->
