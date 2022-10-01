@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 			timelineComponents['eventsContent'] = timeline.children('.events-content');
 
 			//assign a left postion to the single events along the timeline **
-			setDatePosition(timelineComponents, eventsMinDistance);
+			//setDatePosition(timelineComponents, eventsMinDistance);
 			//assign a width to the timeline
 			var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
 			//the timeline has been initialize - show it
@@ -134,13 +134,13 @@ jQuery(document).ready(function($){
 		setTransformValue(filling.get(0), 'scaleX', scaleValue);
 	}
 
-	function setDatePosition(timelineComponents, min) {
-		for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
+	/*function setDatePosition(timelineComponents, min) {
+		for (i = 0; i < 4; i++) {
 		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
 		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
 		    timelineComponents['timelineEvents'].eq(i).css('right', distanceNorm*min+'px');
 		}
-	}
+	}*/
 
 	function setTimelineWidth(timelineComponents, width) {
 		var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length-1]),

@@ -17,16 +17,19 @@ active
                                 <div class="events" style="width: 1800px;">
                                     <ol>
                                         <li><a href="#0" data-date="16/01/2017" style="right: 100px;" class="selected">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="28/02/2017" style="right: 200px;" >اختر الصفات</a></li>
+                                        <li><a href="#0" data-date="28/02/2017" style="right: 240px;" >اختر الصفات</a></li>
                                         <li><a href="#0" data-date="20/04/2017" style="right: 380px;" >معلومات التطبيق</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 400px;">انشئ التقرير</a></li>
+                                        <li><a href="#0" data-date="20/05/2017" style="right: 570px;">انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>
                                 <!-- .events -->
                             </div>
-                            <!-- .events-wrapper -->
-
+                           <!-- .events-wrapper -->
+                        <ul class="cd-timeline-navigation">
+                            <li><a href="#0" class="prev inactive">Prev</a></li>
+                            <li><a href="#0" class="next">Next</a></li>
+                        </ul>
                             <!-- .cd-timeline-navigation -->
                         </div>
                         <!-- .timeline -->
@@ -37,7 +40,7 @@ active
                                                 <small>انسخها والصقها هنا</small>
                                             </h4>
                                     <hr>
-                                   <!-- @include('reviewsForm')-->
+                                 @include('reviewsForm')
                                 </li>
                                 <li data-date="28/02/2017" class="">
                                     <h4 class="text-center">سهولة الاستخدام<br>
