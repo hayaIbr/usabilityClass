@@ -65,7 +65,7 @@ jQuery(document).ready(function($){
 				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
 			});
             //on click next: verify, deny OR show next event content
-            //if(!verifyInputs){ alert }
+            //if(!verifyInputs){ alert; break; }
             timelineComponents['eventsContent'].on('click', 'button', function(){
 				showNewContent(timelineComponents, timelineTotWidth, 'next');
 			});
