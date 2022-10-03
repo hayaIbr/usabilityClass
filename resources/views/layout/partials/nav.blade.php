@@ -3,8 +3,8 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item @yield('home')">
-          <a class="nav-link" href="#">لنبدأ</a>
+        <li class="nav-item @yield('start')">
+          <a class="nav-link" href="/start">لنبدأ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">عن الموقع</a>

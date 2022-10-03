@@ -1,6 +1,6 @@
 @extends('layout.mainlayout')
 
-@section('home')
+@section('start')
 active
 @endsection
 
@@ -61,7 +61,7 @@ active
                                         <small>ها هو تقرير التطبيق جاهز!</small>
                                     </h4>
                             <hr>
-                            @include('reviewsForm') <!-- write here the name of the page for this step-->
+                            @include('finalReport') <!-- write here the name of the page for this step-->
                                 </li>
 
                             </ol>

@@ -1,7 +1,5 @@
 @extends('layout.mainlayout')
-@section('home')
-active
-@endsection
+
 
 @section('content')
 <section class="jumbotron text-center mb-0">
