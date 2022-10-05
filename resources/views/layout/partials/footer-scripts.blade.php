@@ -65,9 +65,9 @@ jQuery(document).ready(function($){
 				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
 			});
             //on click next: verify, deny OR show next event content
-            //if(!verifyInputs){ alert; break; }
             timelineComponents['eventsContent'].on('click', 'button', function(){
-				showNewContent(timelineComponents, timelineTotWidth, 'next');
+				if(verifyInputs())
+                showNewContent(timelineComponents, timelineTotWidth, 'next');
 			});
 
 			//keyboard navigation
@@ -81,7 +81,17 @@ jQuery(document).ready(function($){
 		});
 	}
 
-    function verifyInputs(){;}
+    function verifyInputs(){
+        return true;
+        curr =timelineComponents['eventsWrapper'].find('.selected').parent().index();
+        //each page of the steps and their verification.
+       /* switch(curr){
+            case '0': ; break;
+            case '1': ; break;
+            case '2': ; break;
+            case '3': ; break;
+        }*/
+        ;}
 
 	function updateSlide(timelineComponents, timelineTotWidth, string) {
 		//retrieve translateX value of timelineComponents['eventsWrapper']
@@ -97,7 +107,6 @@ jQuery(document).ready(function($){
 		//go from one event to the next/previous one
 		var visibleContent =  timelineComponents['eventsContent'].find('.selected'),
 			newContent = ( string == 'next' ) ? visibleContent.next() : visibleContent.prev();
-
 		if ( newContent.length > 0 ) { //if there's a next/prev event - show it
 			var selectedDate = timelineComponents['eventsWrapper'].find('.selected'),
 				newEvent = ( string == 'next' ) ? selectedDate.parent('li').next('li').children('a') : selectedDate.parent('li').prev('li').children('a');

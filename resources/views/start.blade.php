@@ -37,7 +37,9 @@ active
                                                 <small>انسخها والصقها هنا</small>
                                             </h4>
                                     <hr>
+                                <div class=container>
                                  @include('reviewsForm')
+                                </div>
                                  <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="28/02/2017" class="">
@@ -45,7 +47,9 @@ active
                                         <small>اي صفات سهولة الاستخدام تريد؟</small>
                                     </h4>
                             <hr>
+                            <div class=container>
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
+                            </div>
                             <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="20/04/2017">
@@ -53,7 +57,9 @@ active
                                         <small>هل من معلومات تريد اضافتها للتقرير؟</small>
                                     </h4>
                             <hr>
+                            <div class=container>
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
+                            </div>
                             <button class="btn btn-primary"> التالي</button>
                                 </li>
                                 <li data-date="20/05/2017">
@@ -61,7 +67,9 @@ active
                                         <small>ها هو تقرير التطبيق جاهز!</small>
                                     </h4>
                             <hr>
+                            <div class=container>
                             @include('finalReport') <!-- write here the name of the page for this step-->
+                            </div>
                                 </li>
 
                             </ol>
