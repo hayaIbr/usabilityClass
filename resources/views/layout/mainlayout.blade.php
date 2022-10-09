@@ -5,7 +5,7 @@
     @include('layout.partials.head')
  </head>
 
- <body class="text-right d-flex flex-column min-vh-100" style="background-color: rgb(232, 236, 239)">
+ <body class="text-center d-flex flex-column min-vh-100" style="background-color: rgb(232, 236, 239)">
 @include('layout.partials.nav')
 
 @yield('content')

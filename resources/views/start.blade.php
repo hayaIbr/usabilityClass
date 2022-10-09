@@ -37,7 +37,7 @@ active
                                                 <small>انسخها والصقها هنا</small>
                                             </h4>
                                     <hr>
-                                <div class=container>
+                                <div class="container p-4">
                                  @include('reviewsForm')
                                 </div>
                                  <button class="btn btn-primary"> التالي</button>
@@ -47,7 +47,7 @@ active
                                         <small>اي صفات سهولة الاستخدام تريد؟</small>
                                     </h4>
                             <hr>
-                            <div class=container>
+                            <div class="container p-4">
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
                             </div>
                             <button class="btn btn-primary"> التالي</button>
@@ -57,7 +57,7 @@ active
                                         <small>هل من معلومات تريد اضافتها للتقرير؟</small>
                                     </h4>
                             <hr>
-                            <div class=container>
+                            <div class="container p-4">
                             @include('reviewsForm') <!-- write here the name of the page for this step-->
                             </div>
                             <button class="btn btn-primary"> التالي</button>
@@ -67,7 +67,7 @@ active
                                         <small>ها هو تقرير التطبيق جاهز!</small>
                                     </h4>
                             <hr>
-                            <div class=container>
+                            <div class="container p-4">
                             @include('finalReport') <!-- write here the name of the page for this step-->
                             </div>
                                 </li>
