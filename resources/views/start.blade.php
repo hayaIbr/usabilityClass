@@ -5,7 +5,6 @@ active
 @endsection
 
 @section('content')
-<span></span>
 <div class="container mt-5">
     <div class="row">
 
@@ -38,6 +37,7 @@ active
                                             </h4>
                                     <hr>
                                 <div class="container p-4">
+
                                  @include('reviewsForm')
                                 </div>
                                  <button class="btn btn-primary"> التالي</button>

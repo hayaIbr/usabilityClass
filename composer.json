@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "algorithmia/algorithmia": "^1.0",
         "fruitcake/laravel-cors": "^2.0",
+        "fx3costa/laravelchartjs": "^2.9",
         "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
