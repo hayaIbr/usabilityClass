@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,10 @@ Route::get('/', function () {
 
 Route::view('/demo2', 'demo');
 Route::view('/home', 'home');
-Route::view('/start', 'start');
+//Route::view('/start', 'start');
+Route::get('/start', 'App\Http\Controllers\ReportController@index');
+
+//Route::post('start/sendAppInfo', [ReportController::class, 'setAppInfo']);
+Route::get('setClasses','App\Http\Controllers\ReportController@setClasses');
+Route::get('setAppInfo','App\Http\Controllers\ReportController@setAppInfo');
+Route::get('setReviews','App\Http\Controllers\ReportController@setReviews');

@@ -67,7 +67,7 @@ jQuery(document).ready(function($){
 			});
             //on click next: verify, deny OR show next event content
             timelineComponents['eventsContent'].on('click', 'button', function(){
-				if(verifyInputs())
+				if(verifyInputs(timelineComponents['eventsWrapper']))
                 showNewContent(timelineComponents, timelineTotWidth, 'next');
 			});
 
@@ -82,16 +82,28 @@ jQuery(document).ready(function($){
 		});
 	}
 
-    function verifyInputs(){
+    function verifyInputs(eventsWrapper){
         return true;
-        curr =timelineComponents['eventsWrapper'].find('.selected').parent().index();
+        //var curr = eventsWarapper.find('.selected').parent().index();
         //each page of the steps and their verification.
-       /* switch(curr){
-            case '0': ; break;
-            case '1': ; break;
-            case '2': if good pass inputs to reportcontroller, then return true. else return alert & return false. ; break;
-        }*/
+        switch(curr){
+            case '0': //{if(validateRevsFormat())
+                {return true;}
+                //else {alert('wrong input');
+                //return false;}}
+            case '1': //(automatic form validation?); break;
+            {return true;}
+            case '2': //if good pass inputs to reportcontroller, then return true. else return alert & return false. ;
+            {return true;}
+        }
         ;}
+    function validateRevsFormat(){
+        //this is the last step, more steps^ for validation should be added.
+       // sessionStorage.setItem("reviews",
+   // $('#reviews').val().toLowerCase().replace(" ", "-"));
+    return true;
+    }
+
 
 	function updateSlide(timelineComponents, timelineTotWidth, string) {
 		//retrieve translateX value of timelineComponents['eventsWrapper']
