@@ -34,7 +34,10 @@ active
                             <ol>
                                 <li class="selected" data-date="16/01/2017">
                                     <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
+                                                <small>انسخها والصقها هنا
+                                                    <br>
+                                                    ملاحظة: كل رأي في سطر من فضلك!
+                                                </small>
                                             </h4>
                                     <hr>
                                 <div class="container p-4">
@@ -51,7 +54,7 @@ active
                             <div class="container p-4">
                             @include('classesChoice') <!-- write here the name of the page for this step-->
                             </div>
-                           
+
                                 </li>
                                 <li data-date="20/04/2017">
                                     <h4 class="text-center">تطبيقك<br>
