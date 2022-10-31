@@ -17,8 +17,6 @@ active
                                     <ol>
                                         @empty($selected)
                                         <li><a href="#0" data-date="16/01/2017" style="right: 100px;" class="selected">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="28/02/2017" style="right: 240px;" >اختر الصفات</a></li>
-                                        <li><a href="#0" data-date="20/04/2017" style="right: 380px;" >معلومات التطبيق</a></li>
                                         <li><a href="#0" data-date="20/05/2017" style="right: 570px;">انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
@@ -40,150 +38,13 @@ active
                                                 </small>
                                             </h4>
                                     <hr>
-                                <div class="container p-4">
+                                    <div class="container p-4">
 
-                                 @include('reviewsForm')
-                                </div>
+                                        @include('formforAll')
+                                       </div>
                                  <!--<button class="btn btn-primary"> التالي</button>-->
                                 </li>
-                                <li data-date="28/02/2017" class="">
-                                    <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي صفات سهولة الاستخدام تريد؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('classesChoice') <!-- write here the name of the page for this step-->
-                            </div>
 
-                                </li>
-                                <li data-date="20/04/2017">
-                                    <h4 class="text-center">تطبيقك<br>
-                                        <small>هل من معلومات تريد اضافتها للتقرير؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('appInfo') <!-- write here the name of the page for this step-->
-                            </div>
-
-                                </li>
-                                <li data-date="20/05/2017">
-                                    <h4 class="text-center">التقرير<br>
-                                        <small>ها هو تقرير التطبيق جاهز!</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('finalReport') <!-- write here the name of the page for this step-->
-                            </div>
-                                </li>
-
-                            </ol>
-                            @endempty
-                            @if($selected=="classes")
-                            <li><a href="#0" data-date="16/01/2017" style="right: 100px;">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="28/02/2017" style="right: 240px;" class="selected" >اختر الصفات</a></li>
-                                        <li><a href="#0" data-date="20/04/2017" style="right: 380px;" >معلومات التطبيق</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 570px;">انشئ التقرير</a></li>
-                                    </ol>
-                                    <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
-                                </div>
-                                <!-- .events -->
-                            </div>
-                           <!-- .events-wrapper -->
-
-                            <!-- .cd-timeline-navigation -->
-                        </div>
-                        <!-- .timeline -->
-                        <div class="events-content">
-                            <ol>
-                                <li data-date="16/01/2017">
-                                    <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
-                                            </h4>
-                                    <hr>
-                                <div class="container p-4">
-
-                                 @include('reviewsForm')
-                                </div>
-                                 <!--<button class="btn btn-primary"> التالي</button>-->
-                                </li>
-                                <li class="selected" data-date="28/02/2017" class="">
-                                    <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي صفات سهولة الاستخدام تريد؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('classesChoice') <!-- write here the name of the page for this step-->
-                            </div>
-
-                                </li>
-                                <li data-date="20/04/2017">
-                                    <h4 class="text-center">تطبيقك<br>
-                                        <small>هل من معلومات تريد اضافتها للتقرير؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('appInfo') <!-- write here the name of the page for this step-->
-                            </div>
-
-                                </li>
-                                <li data-date="20/05/2017">
-                                    <h4 class="text-center">التقرير<br>
-                                        <small>ها هو تقرير التطبيق جاهز!</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('finalReport') <!-- write here the name of the page for this step-->
-                            </div>
-                                </li>
-
-                            </ol> @elseif($selected == "app info")
-                            <li><a href="#0" data-date="16/01/2017" style="right: 100px;">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="28/02/2017" style="right: 240px;" >اختر الصفات</a></li>
-                                        <li><a href="#0" data-date="20/04/2017" style="right: 380px;" class="selected" >معلومات التطبيق</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 570px;">انشئ التقرير</a></li>
-                                    </ol>
-                                    <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
-                                </div>
-                                <!-- .events -->
-                            </div>
-                           <!-- .events-wrapper -->
-
-                            <!-- .cd-timeline-navigation -->
-                        </div>
-                        <!-- .timeline -->
-                        <div class="events-content">
-                            <ol>
-                                <li data-date="16/01/2017">
-                                    <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
-                                            </h4>
-                                    <hr>
-                                <div class="container p-4">
-
-                                 @include('reviewsForm')
-                                </div>
-                                 <!--<button class="btn btn-primary"> التالي</button>-->
-                                </li>
-                                <li data-date="28/02/2017" class="">
-                                    <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي صفات سهولة الاستخدام تريد؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('classesChoice') <!-- write here the name of the page for this step-->
-                            </div>
-
-                                </li>
-                                <li class="selected" data-date="20/04/2017">
-                                    <h4 class="text-center">تطبيقك<br>
-                                        <small>هل من معلومات تريد اضافتها للتقرير؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('appInfo') <!-- write here the name of the page for this step-->
-                            </div>
-
-                                </li>
                                 <li data-date="20/05/2017">
                                     <h4 class="text-center">التقرير<br>
                                         <small>ها هو تقرير التطبيق جاهز!</small>
@@ -219,28 +80,10 @@ active
                                     <hr>
                                 <div class="container p-4">
 
-                                 @include('reviewsForm')
+                                    @include('formforAll')
                                 </div>
-                                 <!--<button class="btn btn-primary"> التالي</button>-->
-                                </li>
-                                <li data-date="28/02/2017" class="">
-                                    <h4 class="text-center">سهولة الاستخدام<br>
-                                        <small>اي صفات سهولة الاستخدام تريد؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('classesChoice') <!-- write here the name of the page for this step-->
-                            </div>
 
                                 </li>
-                                <li data-date="20/04/2017">
-                                    <h4 class="text-center">تطبيقك<br>
-                                        <small>هل من معلومات تريد اضافتها للتقرير؟</small>
-                                    </h4>
-                            <hr>
-                            <div class="container p-4">
-                            @include('appInfo') <!-- write here the name of the page for this step-->
-                            </div>
 
                                 </li>
                                 <li class="selected" data-date="20/05/2017">

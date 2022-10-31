@@ -7,8 +7,8 @@
 
 <script type="text/javascript">
 
-      var labels =  ['eff', 'sat', 'lrnb'];
-      var users = [30,90,70];
+      var labels = $labels;
+      var data = $data;
 
       const data = {
         labels: labels,
