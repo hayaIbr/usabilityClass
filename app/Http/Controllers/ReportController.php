@@ -24,6 +24,7 @@ class ReportController extends Controller
     }
 
     public function setReviews(Request $request){
+        
         $selected = 'classes';
 
         return view('start', compact('selected'));
