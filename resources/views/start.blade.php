@@ -17,7 +17,7 @@ active
                                     <ol>
                                         @empty($selected)
                                         <li><a href="#0" data-date="16/01/2017" style="right: 100px;" class="selected">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 570px;">انشئ التقرير</a></li>
+                                        <li><a href="#0" data-date="20/05/2017" style="right: 590px;">انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>
@@ -57,10 +57,8 @@ active
 
                             </ol>
                             @elseif($selected == "report")
-                            <li><a href="#0" data-date="16/01/2017" style="right: 100px;">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="28/02/2017" style="right: 240px;" >اختر الصفات</a></li>
-                                        <li><a href="#0" data-date="20/04/2017" style="right: 380px;" >معلومات التطبيق</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 570px;" class="selected" >انشئ التقرير</a></li>
+                            <li><a href="#0" data-date="16/01/2017" style="right: 600px;">انسخ الآراء</a></li>
+                                        <li><a href="#0" data-date="20/05/2017" style="right: 500px;" class="selected" >انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>
