@@ -1,5 +1,8 @@
 
+    <div>
     <canvas id="myChart" height="100px"></canvas>
+
+    </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
@@ -33,3 +36,19 @@
 
 </script>
 
+<button class= "btn btn-primary" onclick="window.print()"class="bi bi-printer"> print</button>
+
+
+<style>
+
+@media print {
+  body *{
+    visibility: hidden;
+  }
+  #myChart {
+    visibility: visible;
+  }
+}
+
+
+</style>
