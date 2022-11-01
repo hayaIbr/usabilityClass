@@ -23,10 +23,11 @@ class ReportController extends Controller
         return view('start', compact('selected'));
     }
 
-    public function setReviews(Request $request){
-        
+    public function setReviews(Request $request){  
+        $request-> validate([
+        'reviewsInput' => 'required'
+        ]);   
         $selected = 'classes';
-
         return view('start', compact('selected'));
     }
 

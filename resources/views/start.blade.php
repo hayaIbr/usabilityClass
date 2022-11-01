@@ -34,11 +34,10 @@ active
                             <ol>
                                 <li class="selected" data-date="16/01/2017">
                                     <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
+                                                <small>انسخها والصقها </small>
                                             </h4>
                                     <hr>
                                 <div class="container p-4">
-
                                  @include('reviewsForm')
                                 </div>
                                  <!--<button class="btn btn-primary"> التالي</button>-->
@@ -94,7 +93,7 @@ active
                             <ol>
                                 <li data-date="16/01/2017">
                                     <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
+                                                <small>انسخها والصقها </small>
                                             </h4>
                                     <hr>
                                 <div class="container p-4">
