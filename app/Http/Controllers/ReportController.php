@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Cookie;
+use Tracker;
+use Session;
 
 class ReportController extends Controller
 {
@@ -18,29 +22,34 @@ class ReportController extends Controller
         return view('start', compact('selected'));
     }
 
-    public function setAppInfo(Request $request){
+   /* public function setAppInfo(Request $request){
         $selected = 'report';
         return view('start', compact('selected'));
-    }
+    }*/
 
-    public function setReviews(Request $request){  
+
+    public function AImodel(Request $request){
         $request-> validate([
-        'reviewsInput' => 'required'
-        ]);   
-        $selected = 'classes';
-        return view('start', compact('selected'));
-    }
+            'reviewsInput' => 'required'
+            ]);   
+            $selected = 'report';
 
-    public function setClasses(Request $request){
-        $selected= 'app info';
+        $process = new Process(['python',
+    '/Users/hayaalalsheik/Desktop/pythonScripts/predictUsability.py', $arg]);
+        $process->run();
 
-        return view('start', compact('selected'));
-    }
+        // error handling
+        if (!$process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
 
-    public function AImodel(){
-        $labels = ['effectiveness', 'satsifaction', 'learnability'];
+        $output_data = $process->getOutput();
+
+        $labels = ['effectiveness', 'satsifaction', 'learnability']; //get classes choice from session and manipulate accodringly.
         $data = [40, 100, 30];
         $selected = "report";
+        $appInfo = $request; // divide: var appName, var appBio
+
 
         return view('chart', compact('labels', 'data', 'selected'));
     }

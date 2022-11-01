@@ -28,3 +28,4 @@ Route::get('/start', 'App\Http\Controllers\ReportController@index');
 Route::get('setClasses','App\Http\Controllers\ReportController@setClasses');
 Route::get('setAppInfo','App\Http\Controllers\ReportController@setAppInfo');
 Route::get('setReviews','App\Http\Controllers\ReportController@setReviews');
+Route::get('displayReport','App\Http\Controllers\ReportController@AImodel');
