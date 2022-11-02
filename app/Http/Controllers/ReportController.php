@@ -28,39 +28,44 @@ class ReportController extends Controller
     }*/
 
     public function setReviews(Request $request){
-        $selected = 'classes';
-        
+        // all the form variables validated & saved by here.
         //take checkbox variables and save them in session for later use.
-        $classes = $request->input('checkbox');
-        Session::put('classes', $classes);
-
-        return view('start', compact('selected'));
-    }
-
-    public function setClasses(Request $request){
-        $selected= 'app info';
-
-        return view('start', compact('selected'));
+        //$reviews = $request->reviews;
+        //$selected = 'validated';
+        return view('start', compact('selected', 'reviews'));
     }
 
     public function AImodel(Request $request){
+        // form validation
+
+        // run python script
+        $preds=[];
+        $arg = $request ->input('reviews');//get reviews from form.
+
         $process = new Process(['python',
     '/Users/hayaalalsheik/Desktop/pythonScripts/predictUsability.py', $arg]);
         $process->run();
+
+        while ($process->isRunning()) {
+            // waiting for process to finish
+        }
 
         // error handling
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
 
-        $output_data = $process->getOutput();
+        $preds = $process->getOutput();
+
+        $preds = explode("\n", $preds);
+
 
         $labels = ['effectiveness', 'satsifaction', 'learnability']; //get classes choice from session and manipulate accodringly.
-        $data = [40, 100, 30];
+        $eff = [$preds[1],$preds[2]];
+        $sat = [$preds[3], $preds[4]];
+        $lrn = [$preds[5], $preds[6]];
         $selected = "report";
-        $appInfo = $request; // divide: var appName, var appBio
 
-
-        return view('chart', compact('labels', 'data', 'selected'));
+        return view('start', compact('labels', 'eff', 'sat', 'lrn', 'selected'));
     }
 }

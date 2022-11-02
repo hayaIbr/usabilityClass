@@ -41,6 +41,7 @@ active
                                     <div class="container p-4">
 
                                         @include('formforAll')
+                                        
                                        </div>
                                  <!--<button class="btn btn-primary"> التالي</button>-->
                                 </li>
@@ -57,8 +58,8 @@ active
 
                             </ol>
                             @elseif($selected == "report")
-                            <li><a href="#0" data-date="16/01/2017" style="right: 600px;">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="20/05/2017" style="right: 500px;" class="selected" >انشئ التقرير</a></li>
+                            <li><a href="#0" data-date="16/01/2017" style="right: 100px;" >انسخ الآراء</a></li>
+                                        <li><a href="#0" data-date="20/05/2017" style="right: 590px;" class="selected">انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>
@@ -73,17 +74,21 @@ active
                             <ol>
                                 <li data-date="16/01/2017">
                                     <h4 class="text-center">الآراء والمراجعات<br>
-                                                <small>انسخها والصقها هنا</small>
+                                                <small>انسخها والصقها هنا
+                                                    <br>
+                                                    ملاحظة: كل رأي في سطر من فضلك!
+                                                </small>
                                             </h4>
                                     <hr>
-                                <div class="container p-4">
+                                    <div class="container p-4">
 
-                                    @include('formforAll')
-                                </div>
 
+                                            @include('formforAll')
+
+                                       </div>
+                                 <!--<button class="btn btn-primary"> التالي</button>-->
                                 </li>
 
-                                </li>
                                 <li class="selected" data-date="20/05/2017">
                                     <h4 class="text-center">التقرير<br>
                                         <small>ها هو تقرير التطبيق جاهز!</small>
@@ -95,6 +100,7 @@ active
                                 </li>
 
                             </ol>
+
                             @endif
                         </div>
                     </div>

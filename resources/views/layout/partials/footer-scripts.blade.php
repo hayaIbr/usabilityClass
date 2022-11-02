@@ -66,7 +66,7 @@ jQuery(document).ready(function($){
 				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
 			});
             //on click next: verify, deny OR show next event content
-            timelineComponents['eventsContent'].on('click', 'button', function(){
+            timelineComponents['eventsContent'].on('click', '#go-next', function(){
 				if(verifyInputs(timelineComponents['eventsWrapper']))
                 showNewContent(timelineComponents, timelineTotWidth, 'next');
 			});
