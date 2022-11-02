@@ -40,7 +40,7 @@ class ReportController extends Controller
         $request-> validate([
             'reviewsInput' => 'required'
             ]);
-            
+
         // run python script
         $preds=[];
         $arg = $request ->input('reviewsInput');//get reviews from form.
@@ -69,6 +69,6 @@ class ReportController extends Controller
         $lrn = [$preds[5], $preds[6]];
         $selected = "report";
 
-        return view('start', compact('labels', 'eff', 'sat', 'lrn', 'selected'));
+        return view('start', compact( 'eff', 'sat', 'lrn', 'selected'));
     }
 }

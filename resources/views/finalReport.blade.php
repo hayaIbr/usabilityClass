@@ -17,16 +17,16 @@
     const DATA_COUNT = 3;
     const NUMBER_CFG = {count: DATA_COUNT, min: 1, max: 1000};
 
-      const labels = {{ Js::from($labels ?? '') }};
+      const labels = {{ Js::from($labels ?? ['الفاعلية', 'الرضى العام', 'سهولة التعلم']) }};
       const data = {
         labels: labels,
         datasets: [{
-          label: 'positive',
+          label: 'جيد',
           borderColor: 'rgb(155,219,151)',
           backgroundColor: 'rgba(120, 245, 66, 0.5)',
           data: [eff[0], sat[0], lrn[0]]
         }, {
-          label: 'negative',
+          label: 'سيء',
           borderColor: 'rgb(255, 99, 132)',
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
           data: [eff[1], sat[1], lrn[1]]
@@ -37,7 +37,7 @@
        type: 'bar',
        data: data,
        options: {
-        indexAxis: 'y',
+        indexAxis: 'x',
     // Elements options apply to all of the options unless overridden in a dataset
     // In this case, we are setting the border of each horizontal bar to be 2px wide
         elements: {
@@ -48,7 +48,7 @@
         responsive: true,
         plugins: {
           legend: {
-          position: 'right',
+          position: 'left',
          },
         title: {
          display: true,
