@@ -28,7 +28,7 @@
   <br></br>
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1"> اضف المراجعات هنا أو اختر ملف </label>  <br></br>
+    <label for="exampleFormControlTextarea1"> اضف المراجعات هنا أو اختر ملف </label>  <br> <small>ملاحظة!: كل رأي في سطر من فضلك.</small><br>
     <textarea class="form-control" name="reviewsInput" id="exampleFormControlTextarea1" rows="3" placeholder=" الاراء والمراجعات . ." form="review-form"></textarea>
   </div>
 

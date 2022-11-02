@@ -15,7 +15,7 @@
     var lrn ={{ Js::from($lrn ?? '') }};
 
     const DATA_COUNT = 3;
-    const NUMBER_CFG = {count: DATA_COUNT, min: -1000, max: 1000};
+    const NUMBER_CFG = {count: DATA_COUNT, min: 1, max: 1000};
 
       const labels = {{ Js::from($labels ?? '') }};
       const data = {
@@ -65,7 +65,7 @@
 
 
 </script>
-<br></br>
+<br>
 
 
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -76,7 +76,7 @@
                             <i class="fa-solid fa-share"></i> مشاركة </button>
 
                           <button type="button" class="btn btn-outline-secondary">
-                            <i class="fa fa-download"></i>تحميل</button>
+                            <i class="fa fa-download"></i> تحميل </button>
                         </div>
 
 
@@ -96,7 +96,7 @@
 }
 
 .container{
-    
+
     margin-top:100px;
 }
 
