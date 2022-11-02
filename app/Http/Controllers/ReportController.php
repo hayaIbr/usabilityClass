@@ -37,10 +37,13 @@ class ReportController extends Controller
 
     public function AImodel(Request $request){
         // form validation
-
+        $request-> validate([
+            'reviewsInput' => 'required'
+            ]);
+            
         // run python script
         $preds=[];
-        $arg = $request ->input('reviews');//get reviews from form.
+        $arg = $request ->input('reviewsInput');//get reviews from form.
 
         $process = new Process(['python',
     '/Users/hayaalalsheik/Desktop/pythonScripts/predictUsability.py', $arg]);
