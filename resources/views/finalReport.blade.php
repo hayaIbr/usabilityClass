@@ -13,9 +13,10 @@
     var eff ={{ Js::from($eff ?? '') }};
     var sat ={{ Js::from($sat ?? '') }};
     var lrn ={{ Js::from($lrn ?? '') }};
+    var app_name = {{ Js::from($app_name ?? 'آراء تطبيقك') }};
 
     const DATA_COUNT = 3;
-    const NUMBER_CFG = {count: DATA_COUNT, min: 1, max: 1000};
+    const NUMBER_CFG = {count: DATA_COUNT, min: 1, max: 100};
 
       const labels = {{ Js::from($labels ?? ['الفاعلية', 'الرضى العام', 'سهولة التعلم']) }};
       const data = {
@@ -34,29 +35,21 @@
       };
 
       const config = {
-       type: 'bar',
-       data: data,
-       options: {
-        indexAxis: 'x',
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
-        elements: {
-           bar: {
-           borderWidth: 2,
-           }
-        },
-        responsive: true,
-        plugins: {
-          legend: {
-          position: 'left',
-         },
-        title: {
-         display: true,
-         text: "Your App's Name"
-         }
-        }
-       },
-    };
+  type: 'bar',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: app_name
+      }
+    }
+  },
+};
 
     const myChart = new Chart(
        document.getElementById('myChart'),

@@ -34,7 +34,8 @@
 
 
   <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input name="csvFile" type="file" class="form-control-file" id="exampleFormControlFile1"> <input type="button" class= "btn btn-outline-secondary btn-sm invisible" id="cancel" value="الغاء الملف" style="position: absolute; top:420px; right:460px">
+
   </div>
 
 
@@ -67,6 +68,29 @@
 <style>
     textarea {
         resize: none;
-        border: 10px solid blue;
+        border: 10px solid blue;}
 
 </style>
+
+<script>
+var textarea = document.getElementById("exampleFormControlTextarea1");
+var file = document.getElementById("exampleFormControlFile1");
+cancel = document.getElementById("cancel")
+textarea.onchange = function () {
+   if (this.value != "" || this.value.length > 0) {
+      document.getElementById("exampleFormControlFile1").disabled = true;
+   } else {document.getElementById("exampleFormControlFile1").disabled = false;}}
+
+
+   file.onchange = function () {
+   if (this.value !== "" ) {
+      document.getElementById("exampleFormControlTextarea1").disabled = true;
+      cancel.classList.remove("invisible");
+   } else {document.getElementById("exampleFormControlTextarea1").disabled = false;}
+}
+
+cancel.onclick = function () {
+      file.value = "";
+    textarea.disabled = false;}
+
+</script>

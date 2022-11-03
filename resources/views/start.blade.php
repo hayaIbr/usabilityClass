@@ -54,8 +54,8 @@ active
 
                             </ol>
                             @elseif($selected == "report")
-                            <li><a href="#0" data-date="16/01/2017" style="right: 190px;" >انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="20/01/2017" style="right: 495px;" class="selected">انشئ التقرير</a></li>
+                            <li><a href="#0" data-date="16/01/2017" style="right: 150px;" >انسخ الآراء</a></li>
+                                        <li><a href="#0" data-date="20/01/2017" style="left: 130px;" class="selected">انشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>

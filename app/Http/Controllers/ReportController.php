@@ -38,11 +38,13 @@ class ReportController extends Controller
     public function AImodel(Request $request){
         // form validation
         $request-> validate([
-            'reviewsInput' => 'required'
+            'reviewsInput' => 'required_without:csvFile',
+            'csvFile' => 'required_without:reviewsInput'
             ]);
 
         // run python script
         $preds=[];
+        $app_name = $request ->input('');
         $arg = $request ->input('reviewsInput');//get reviews from form.
 
         $process = new Process(['python',
