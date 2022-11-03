@@ -16,8 +16,8 @@ active
                                 <div class="events" style="width: 1800px;">
                                     <ol>
                                         @empty($selected)
-                                        <li><a href="#0" data-date="16/01/2017" style="right: 190px;" class="selected">انسخ الآراء</a></li>
-                                        <li><a href="#0" data-date="20/01/2017" style="right: 495px;">انشئ التقرير</a></li>
+                                        <li><a href="#0" data-date="16/01/2017" style="right: 190px;" class="selected">إنسخ الآراء</a></li>
+                                        <li><a href="#0" data-date="20/01/2017" style="right: 495px;">أنشئ التقرير</a></li>
                                     </ol>
                                     <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.281506);"></span>
                                 </div>

@@ -18,7 +18,7 @@
     const DATA_COUNT = 3;
     const NUMBER_CFG = {count: DATA_COUNT, min: 1, max: 100};
 
-      const labels = {{ Js::from($labels ?? ['الفاعلية', 'الرضى العام', 'سهولة التعلم']) }};
+      const labels = ['الفاعلية', 'الرضى العام', 'سهولة التعلم']
       const data = {
         labels: labels,
         datasets: [{
