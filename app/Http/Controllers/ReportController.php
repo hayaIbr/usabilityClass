@@ -42,10 +42,19 @@ class ReportController extends Controller
             'csvFile' => 'required_without:reviewsInput'
             ]);
 
+
+        if($request->hasFile('csvFile')){
+            $file = $request ->file('csvFile');
+            $ftoStr = file_get_contents($file); // convert to string
+            $arg = $ftoStr; //dd($ftoStr);// replace commas , with new line \n.
+        }
+        else {
+            $arg = $request ->input('reviewsInput');//get reviews from form.
+        }
+
         // run python script
         $preds=[];
-        $app_name = $request ->input('');
-        $arg = $request ->input('reviewsInput');//get reviews from form.
+        $app_name = $request ->input('nameApp');
 
         $process = new Process(['python',
     '/Users/hayaalalsheik/Desktop/pythonScripts/predictUsability.py', $arg]);
@@ -71,6 +80,6 @@ class ReportController extends Controller
         $lrn = [$preds[5], $preds[6]];
         $selected = "report";
 
-        return view('start', compact( 'eff', 'sat', 'lrn', 'selected'));
+        return view('start', compact( 'app_name', 'eff', 'sat', 'lrn', 'selected'));
     }
 }

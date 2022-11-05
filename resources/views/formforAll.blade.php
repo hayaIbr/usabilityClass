@@ -1,10 +1,10 @@
-<form action="{{ url('displayReport') }}" id="review-form">
-
+<form action="{{ url('displayReport') }}" id="review-form" method="post" enctype="multipart/form-data">
+    @csrf
 <br></br>
 
 
 
-<form>
+
 
 
             @if ($errors->any())
@@ -34,7 +34,7 @@
 
 
   <div class="form-group">
-    <input name="csvFile" type="file" class="form-control-file" id="exampleFormControlFile1"> <input type="button" class= "btn btn-outline-secondary btn-sm invisible" id="cancel" value="الغاء الملف" style="position: absolute; top:420px; right:460px">
+    <input name="csvFile" type="file" accept=".csv" class="form-control-file" id="exampleFormControlFile1"> <input type="button" class= "btn btn-outline-secondary btn-sm invisible" id="cancel" value="الغاء الملف" style="position: absolute; top:420px; right:780px">
 
   </div>
 
