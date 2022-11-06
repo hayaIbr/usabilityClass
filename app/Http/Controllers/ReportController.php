@@ -57,11 +57,11 @@ class ReportController extends Controller
         else {
             $arg = $request ->input('reviewsInput');//get reviews from form.
         }
-
-        // run python script
         $preds=[];
         $app_name = $request ->input('nameApp');
 
+        
+        // run python script
         $process = new Process(['python',
     '/Users/hayaalalsheik/Desktop/pythonScripts/predictUsability.py', $arg]);
         $process->run();

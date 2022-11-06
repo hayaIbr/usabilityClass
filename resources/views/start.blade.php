@@ -6,7 +6,7 @@ active
 
 @section('content')
 <div class="container mt-5">
-    <div class="row">
+    <div >
 <span id="test"></span>
             <div class="card">
                 <div class="body1">

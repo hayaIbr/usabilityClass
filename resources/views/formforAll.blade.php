@@ -32,12 +32,14 @@
     <textarea class="form-control" name="reviewsInput" id="exampleFormControlTextarea1" rows="3" placeholder=" الاراء والمراجعات . ." form="review-form"></textarea>
   </div>
 
-
-  <div class="form-group">
-    <input name="csvFile" type="file" accept=".csv" class="form-control-file" id="exampleFormControlFile1"> <input type="button" class= "btn btn-outline-secondary btn-sm invisible" id="cancel" value="الغاء الملف" style="position: absolute; top:420px; right:780px">
-
+<div class="row">
+  <div class="form-group col-8">
+    <input name="csvFile" type="file" accept=".csv" class="form-control-file" id="exampleFormControlFile1">
   </div>
-
+<div class="col-4">
+    <input type="button" class= "btn btn-outline-secondary btn-sm invisible" id="cancel" value="الغاء الملف">
+</div>
+</div>
 
   <br></br>
 

@@ -1,5 +1,5 @@
 
-    <div>
+    <div id="report">
     <canvas id="myChart" height="170px"></canvas></div>
 <br>
     <label class="mt-4">  محاور سهولة الاستخدام </label>
@@ -23,6 +23,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js" integrity="sha512-QJy1NRNGKQoHmgJ7v+45V2uDbf2me+xFoN9XewaSKkGwlqEHyqLVaLtVm93FzxVCKnYEZLFTI4s6v0oD0FbAlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 
 <script type="text/javascript">
@@ -70,7 +73,7 @@
         text: app_name,
       }
       }
-     },
+     }
     };
 
     Chart.defaults.font.size = 17;
@@ -145,12 +148,11 @@ myChart.update();
   }
 });*/
 
-function increaseFontSize() {
-    txt = document.getElementById('b');
-    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-    currentSize = parseFloat(style);
-    txt.style.fontSize = (currentSize + 1) + 'px';
-}
+
+
+
+
+
 </script>
 <br>
 
@@ -159,7 +161,7 @@ function increaseFontSize() {
                           <button type="button" class="btn btn-outline-secondary" onclick="window.print()" >
                             <i class="fa-solid fa-print"></i> طباعة </button>
 
-                          <button type="button" class="btn btn-outline-secondary">
+                          <button type="button" id='downloadPDF'class="btn btn-outline-secondary" onclick="generatePDF()">
                             <i class="fa fa-download"></i> تحميل </button>
                         </div>
 <div class="m-4" style="position: relative; left:37%;">
@@ -173,6 +175,16 @@ function increaseFontSize() {
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     <!-- AddToAny END -->
 </div>
+<script>
+       function generatePDF() {
+      const canvas = document.getElementById("myChart");
+      const canvasImage = canvas.toDataURL('image/jpg', 1.0);
+      let pdf = new jsPDF('landscape');
+      pdf.setFontSize(20);
+      pdf.addImage(canvasImage, 'JPG', 15,15,280,150);
+      pdf.save(app_name+'_reviews_report.pdf');
+   }
+</script>
 
 <style>
 
