@@ -11,7 +11,7 @@
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $errors)
-                    <li> {{$errors}} </li>
+                    <li> {{$message ?? ''}} </li>
                     @endforeach
                 </ul>
     </div>
@@ -41,25 +41,9 @@
 
   <br></br>
 
-  <label for="exampleFormControlTextarea1">اختر التصنيف المناسب  </label>
 
-  <br></br>
 
-  <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1"> الرضا</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2"> التمام </label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-  <label class="form-check-label" for="inlineCheckbox3"> التعلم </label>
-</div>
 
-<br></br>
-<br></br>
 
 
 <button class= "btn btn-primary" type="submit">التالي</button>

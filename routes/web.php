@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('layout.mainlayout');
 });
 
-Route::view('/demo2', 'demo');
+Route::view('/about', 'demo');
 Route::view('/home', 'home');
 //Route::view('/start', 'start');
 Route::get('/start', 'App\Http\Controllers\ReportController@index');

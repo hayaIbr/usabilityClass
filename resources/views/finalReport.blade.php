@@ -1,6 +1,6 @@
 
     <div>
-    <canvas id="myChart" height="100px"></canvas></div>
+    <canvas id="myChart" height="170px"></canvas></div>
 <br>
     <label class="mt-4">  محاور سهولة الاستخدام </label>
 
@@ -73,10 +73,12 @@
      },
     };
 
+    Chart.defaults.font.size = 17;
     const myChart = new Chart(
        document.getElementById('myChart'),
         config
       );
+
 
 
       function filterC(){

@@ -39,8 +39,14 @@ class ReportController extends Controller
         // form validation
         $request-> validate([
             'reviewsInput' => 'required_without:csvFile',
-            'csvFile' => 'required_without:reviewsInput'
-            ]);
+           'csvFile' => 'required_without:reviewsInput',
+           'nameApp'=> 'required'
+
+        ],[
+            'required' => 'اسم التذبيق مطلوب',
+            'required_without:reviewsInput' => 'يجب اما  ادخال ملف او كتابة الاراء'
+        ]
+        );
 
 
         if($request->hasFile('csvFile')){
